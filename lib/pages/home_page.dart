@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_innovainfosys_navid_1/home_page_utils/greetingsContainer.dart';
 import 'package:flutter_innovainfosys_navid_1/home_page_utils/weatherTicketContainer.dart';
+import 'package:flutter_innovainfosys_navid_1/bottom_navigation_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,20 +11,21 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int _currentIndex = 0;
+
+  void _onTabTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xff4c7380),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: '',
-          ),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
-        ],
+      bottomNavigationBar: BottomNavigationBarWidget(
+        currentIndex: _currentIndex,
+        onTap: _onTabTapped,
       ),
       body: SafeArea(
         child: Padding(
@@ -258,6 +260,8 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
+
+              // Active Componants lists
             ],
           ),
         ),
