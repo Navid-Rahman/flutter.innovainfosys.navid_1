@@ -41,7 +41,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HomePage(),
+                    builder: (context) => const HomePage(),
                   ),
                 );
               } else if (index == 1) {
@@ -49,7 +49,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => SmartHomePage(),
+                    builder: (context) => const SmartHomePage(),
                   ),
                 );
               } else if (index == 2) {
@@ -57,7 +57,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => PowerUsagePage(),
+                    builder: (context) => const PowerUsagePage(),
                   ),
                 );
               } else {
