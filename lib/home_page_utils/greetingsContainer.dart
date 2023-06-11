@@ -43,7 +43,7 @@ Widget buildGreetingsContainer() {
             Icons.notifications,
             color: Colors.black,
           ),
-        )
+        ),
       ],
     ),
   );

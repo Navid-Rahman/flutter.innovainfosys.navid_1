@@ -26,7 +26,7 @@ class _PowerUsagePageState extends State<PowerUsagePage> {
         onTap: _onTabTapped,
       ),
       body: SafeArea(
-        child: Text('Hello World'),
+        child: Text('Welcome to Power usage Page'),
       ),
     );
   }
