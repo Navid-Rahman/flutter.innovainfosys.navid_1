@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_innovainfosys_navid_1/pages/home_page.dart';
+import 'package:flutter_innovainfosys_navid_1/pages/power_usage.dart';
+import 'package:flutter_innovainfosys_navid_1/pages/smart_home_page.dart';
 
 class BottomNavigationBarWidget extends StatefulWidget {
   final int currentIndex;
@@ -32,7 +35,35 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
             showUnselectedLabels: false,
             type: BottomNavigationBarType.fixed,
             currentIndex: widget.currentIndex,
-            onTap: widget.onTap,
+            onTap: (index) {
+              if (index == 0) {
+                // Navigate to HomePage
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomePage(),
+                  ),
+                );
+              } else if (index == 1) {
+                // Navigate to SmartHomePage
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SmartHomePage(),
+                  ),
+                );
+              } else if (index == 2) {
+                // Navigate to PowerUsagePage
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PowerUsagePage(),
+                  ),
+                );
+              } else {
+                widget.onTap(index);
+              }
+            },
             items: [
               BottomNavigationBarItem(
                 icon: Container(
