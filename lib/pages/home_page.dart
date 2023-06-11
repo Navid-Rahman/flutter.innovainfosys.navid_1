@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_innovainfosys_navid_1/home_page_utils/greetingsContainer.dart';
 import 'package:flutter_innovainfosys_navid_1/home_page_utils/weatherTicketContainer.dart';
 import 'package:flutter_innovainfosys_navid_1/bottom_navigation_bar.dart';
+import 'package:flutter_innovainfosys_navid_1/home_page_utils/roomContainer.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -83,185 +84,172 @@ class _HomePageState extends State<HomePage> {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             // Living room Container
-                            Container(
-                              height: 180,
-                              width: 150,
-                              decoration: BoxDecoration(
-                                color: const Color(0xffd8e4e8),
-                                borderRadius: BorderRadius.circular(16),
-                              ),
-                              child: Column(
+                            RoomContainer(
+                              imagePath: 'icons/living-room.png',
+                              temperature: '19${String.fromCharCode(0x00B0)}C',
+                              roomName: 'Living Room',
+                              deviceCount: '5',
+                            ),
+
+                            // Bedroom container
+                            RoomContainer(
+                              imagePath: 'icons/bedroom.png',
+                              temperature: '12${String.fromCharCode(0x00B0)}C',
+                              roomName: 'Bedroom',
+                              deviceCount: '8',
+                            ),
+
+                            // Active Componants lists
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(8, 2, 8, 5),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 10.0),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              10, 3, 6, 2),
-                                          decoration: BoxDecoration(
-                                            color: const Color(0xff4c7380),
-                                            borderRadius:
-                                                BorderRadius.circular(6),
-                                          ),
-                                          child: Text(
-                                            '19${String.fromCharCode(0x00B0)}C',
-                                            style: const TextStyle(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w600,
-                                              letterSpacing: 0.07,
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  const Image(
-                                    image: AssetImage('icons/living-room.png'),
-                                    height: 90,
-                                    width: 90,
-                                  ),
-                                  const Text(
-                                    'Living Room',
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w600,
-                                      letterSpacing: 0.09,
-                                      color: Color(0xFF404040),
-                                    ),
-                                  ),
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
+                                      const Text(
+                                        'Active',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w600,
+                                          letterSpacing: 0.09,
+                                          color: Color(0xFF404040),
+                                        ),
+                                      ),
                                       Container(
-                                        padding: const EdgeInsets.all(2),
+                                        width: 20,
                                         decoration: BoxDecoration(
-                                          color: const Color(0xFFFFE266),
+                                          color: const Color(0xFF4C7380),
                                           borderRadius:
                                               BorderRadius.circular(4),
                                         ),
                                         child: const Text(
-                                          '5',
+                                          '6',
+                                          textAlign: TextAlign.center,
                                           style: TextStyle(
-                                            fontSize: 12,
+                                            fontSize: 14,
                                             fontWeight: FontWeight.w600,
-                                            letterSpacing: 0.06,
-                                            color: Color(0xFF404040),
+                                            letterSpacing: 0.07,
+                                            color: Colors.white,
                                           ),
                                         ),
                                       ),
-                                      const Text(
-                                        'devices',
-                                        style: TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w400,
-                                          letterSpacing: 0.06,
-                                          color: Color(0xFF404040),
-                                        ),
-                                      ),
                                     ],
+                                  ),
+                                  const Text(
+                                    'See All',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w600,
+                                        letterSpacing: 0.08,
+                                        color: Color(0xFF4C7380)),
                                   ),
                                 ],
                               ),
                             ),
 
-                            // Bedroom container
-                            Container(
-                              height: 180,
-                              width: 150,
-                              decoration: BoxDecoration(
-                                color: const Color(0xffd8e4e8),
-                                borderRadius: BorderRadius.circular(16),
-                              ),
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 10.0),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              10, 3, 6, 2),
-                                          decoration: BoxDecoration(
-                                            color: const Color(0xff4c7380),
-                                            borderRadius:
-                                                BorderRadius.circular(6),
-                                          ),
-                                          child: Text(
-                                            '12${String.fromCharCode(0x00B0)}C',
-                                            style: const TextStyle(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w600,
-                                              letterSpacing: 0.07,
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                            //AC container section
+                            Row(
+                              children: [
+                                Container(
+                                  width: 150,
+                                  height: 130,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFF9A7265),
+                                    borderRadius: BorderRadius.circular(8),
                                   ),
-                                  const Image(
-                                    image: AssetImage('icons/bedroom.png'),
-                                    height: 90,
-                                    width: 90,
-                                  ),
-                                  const Text(
-                                    'Bedroom',
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w600,
-                                      letterSpacing: 0.09,
-                                      color: Color(0xFF404040),
-                                    ),
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
+                                  child: Column(
                                     children: [
-                                      Container(
-                                        padding: const EdgeInsets.all(2),
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xFFFFE266),
-                                          borderRadius:
-                                              BorderRadius.circular(4),
-                                        ),
-                                        child: const Text(
-                                          '8',
-                                          style: TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w600,
-                                            letterSpacing: 0.06,
-                                            color: Color(0xFF404040),
+                                      Row(
+                                        children: [
+                                          const Image(
+                                            image: AssetImage(
+                                                'icons/air-conditioner.png'),
+                                            height: 70,
+                                            width: 70,
                                           ),
-                                        ),
+                                          Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.end,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
+                                            children: [
+                                              const Text(
+                                                'Temparature',
+                                                style: TextStyle(
+                                                  fontSize: 12,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.white,
+                                                  letterSpacing: 0.06,
+                                                ),
+                                              ),
+                                              Text(
+                                                '19${String.fromCharCode(0x00B0)}C',
+                                                style: const TextStyle(
+                                                  fontSize: 18,
+                                                  fontWeight: FontWeight.w600,
+                                                  letterSpacing: 0.09,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
                                       ),
-                                      const Text(
-                                        'devices',
-                                        style: TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w400,
-                                          letterSpacing: 0.06,
-                                          color: Color(0xFF404040),
+                                      Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            7, 10, 2, 2),
+                                        child: Row(
+                                          children: [
+                                            const Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Text(
+                                                  'AC',
+                                                  style: TextStyle(
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w600,
+                                                    color: Colors.white,
+                                                    letterSpacing: 0.09,
+                                                  ),
+                                                ),
+                                                Text(
+                                                  'Living room',
+                                                  style: TextStyle(
+                                                    fontSize: 12,
+                                                    fontWeight: FontWeight.w400,
+                                                    color: Colors.white,
+                                                    letterSpacing: 0.06,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Container(
+                                              child: const Image(
+                                                image: AssetImage(
+                                                    'icons/off-button.png'),
+                                                width: 45,
+                                                height: 45,
+                                                color: Color(0xff659a6d),
+                                              ),
+                                            )
+                                          ],
                                         ),
                                       ),
                                     ],
                                   ),
-                                ],
-                              ),
-                            ),
+                                ),
+                              ],
+                            )
                           ],
                         ),
                       ],
                     ),
                   ),
                 ),
-              ),
-
-              // Active Componants lists
+              )
             ],
           ),
         ),
