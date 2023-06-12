@@ -7,37 +7,34 @@ Widget buildRoomContainer(
   String deviceCount,
 ) {
   return Container(
-    height: 180,
-    width: 150,
+    height: 165,
+    width: 165,
     decoration: BoxDecoration(
       color: const Color(0xffd8e4e8),
       borderRadius: BorderRadius.circular(16),
     ),
     child: Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 10.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                margin: const EdgeInsets.fromLTRB(10, 3, 6, 2),
-                decoration: BoxDecoration(
-                  color: const Color(0xff4c7380),
-                  borderRadius: BorderRadius.circular(6),
-                ),
-                child: Text(
-                  temperature,
-                  style: const TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 0.07,
-                    color: Colors.white,
-                  ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+              margin: const EdgeInsets.fromLTRB(10, 3, 6, 2),
+              decoration: BoxDecoration(
+                color: const Color(0xff4c7380),
+                borderRadius: BorderRadius.circular(6),
+              ),
+              child: Text(
+                temperature,
+                style: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 0.07,
+                  color: Colors.white,
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
         Image.asset(
           imageAsset,

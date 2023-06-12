@@ -1,27 +1,31 @@
 import 'package:flutter/material.dart';
 
-class SmartModeContainer extends StatelessWidget {
-  final String title;
+class SmartDeviceContainer extends StatelessWidget {
+  final String deviceName;
   final String location;
   final String schedule;
+  final String deviceIcon;
   final String fromTime;
   final String toTime;
-  final String iconPath;
+  final bool isButtonOn;
 
-  const SmartModeContainer({
-    required this.title,
+  const SmartDeviceContainer({
+    Key? key,
+    required this.deviceName,
     required this.location,
     required this.schedule,
+    required this.deviceIcon,
     required this.fromTime,
     required this.toTime,
-    required this.iconPath,
-  });
+    required this.isButtonOn,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 0, vertical: 8),
       width: double.infinity,
-      height: 100,
+      height: 120,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         color: Colors.white,
@@ -40,7 +44,7 @@ class SmartModeContainer extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        title,
+                        deviceName,
                         textAlign: TextAlign.start,
                         style: const TextStyle(
                           fontSize: 14,
@@ -51,7 +55,9 @@ class SmartModeContainer extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 2),
+                  const SizedBox(
+                    height: 2,
+                  ),
                   Row(
                     children: [
                       Container(
@@ -85,7 +91,9 @@ class SmartModeContainer extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 3),
+                  const SizedBox(
+                    height: 3,
+                  ),
                   Row(
                     children: [
                       Container(
@@ -93,10 +101,12 @@ class SmartModeContainer extends StatelessWidget {
                         height: 40,
                         child: Image(
                           fit: BoxFit.cover,
-                          image: AssetImage(iconPath),
+                          image: AssetImage(deviceIcon),
                         ),
                       ),
-                      const SizedBox(width: 8),
+                      const SizedBox(
+                        width: 8,
+                      ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -109,7 +119,9 @@ class SmartModeContainer extends StatelessWidget {
                               color: Color(0xFF404040),
                             ),
                           ),
-                          const SizedBox(height: 2),
+                          const SizedBox(
+                            height: 2,
+                          ),
                           Text(
                             fromTime,
                             style: const TextStyle(
@@ -137,41 +149,91 @@ class SmartModeContainer extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      const Text(
-                        'to',
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                          letterSpacing: 0.06,
-                          color: Color(0xFF404040),
-                        ),
-                      ),
-                      const SizedBox(height: 2),
-                      Text(
-                        toTime,
-                        style: const TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          letterSpacing: 0.07,
-                          color: Color(0xFF404040),
+                      Image(
+                        height: 50,
+                        width: 50,
+                        image: AssetImage(
+                          isButtonOn
+                              ? 'icons/switch-on.png'
+                              : 'icons/switch-off.png',
                         ),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 10),
-                  ElevatedButton(
-                    onPressed: () {
-                      // Implement your button action here
-                    },
-                    child: const Text(
-                      'Button',
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: 0.07,
-                        color: Colors.white,
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 0, 6, 0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            const Row(
+                              children: [
+                                Text(
+                                  'to',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400,
+                                    letterSpacing: 0.06,
+                                    color: Color(0xFF404040),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  toTime,
+                                  textAlign: TextAlign.center,
+                                  style: const TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                    letterSpacing: 0.08,
+                                    color: Color(0xFF404040),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
+                      Column(
+                        children: [
+                          Container(
+                            width: 1,
+                            height: 20,
+                            color: Colors.grey,
+                          ),
+                        ],
+                      ),
+                      const Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Row(
+                            children: [
+                              Image(
+                                width: 24,
+                                height: 24,
+                                image: AssetImage(
+                                  'icons/delete.png',
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Image(
+                                width: 20,
+                                height: 20,
+                                image: AssetImage('icons/edit.png'),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -182,3 +244,48 @@ class SmartModeContainer extends StatelessWidget {
     );
   }
 }
+
+
+
+// Container(
+                      //   margin: const EdgeInsets.fromLTRB(
+                      //       0, 10, 0, 0),
+                      //   decoration: BoxDecoration(
+                      //     border: Border.all(
+                      //       color: const Color(0xFF9A7265),
+                      //     ),
+                      //     color: const Color(0xFFE7DDDA),
+                      //     borderRadius:
+                      //         BorderRadius.circular(25),
+                      //   ),
+                      //   child: const Row(
+                      //     crossAxisAlignment:
+                      //         CrossAxisAlignment.center,
+                      //     children: [
+                      //       Opacity(
+                      //         opacity: 0.9,
+                      //         child: SizedBox(
+                      //           width: 15,
+                      //           height: 15,
+                      //           child: Image(
+                      //             image: AssetImage(
+                      //                 'icons/power-switch.png'),
+                      //             color: Color(0xFF9A7265),
+                      //           ),
+                      //         ),
+                      //       ),
+                      //       Center(
+                      //         child: Text(
+                      //           'ON',
+                      //           textAlign: TextAlign.center,
+                      //           style: TextStyle(
+                      //             fontSize: 16,
+                      //             fontWeight: FontWeight.w600,
+                      //             letterSpacing: 0.08,
+                      //             color: Color(0xFF9A7265),
+                      //           ),
+                      //         ),
+                      //       ),
+                      //     ],
+                      //   ),
+                      // ),

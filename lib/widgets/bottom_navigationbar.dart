@@ -23,6 +23,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 80,
       padding: const EdgeInsets.symmetric(horizontal: 24),
       decoration: const BoxDecoration(
         color: AppColors.primaryColor,
@@ -72,7 +73,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
             icon: Container(
               width: (MediaQuery.of(context).size.width - 40) / 4,
               margin: const EdgeInsets.only(right: 8),
-              height: 60,
+              height: 45,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
@@ -91,7 +92,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
             icon: Container(
               margin: const EdgeInsets.only(right: 8),
               width: (MediaQuery.of(context).size.width - 40) / 4,
-              height: 60,
+              height: 45,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
@@ -110,7 +111,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
             icon: Container(
               margin: const EdgeInsets.only(right: 8),
               width: (MediaQuery.of(context).size.width - 40) / 4,
-              height: 60,
+              height: 45,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
@@ -128,7 +129,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
           BottomNavigationBarItem(
             icon: Container(
               width: (MediaQuery.of(context).size.width - 40) / 4,
-              height: 60,
+              height: 45,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),

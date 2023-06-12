@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_innovainfosys_navid_1/smartHomePage_utils/drop_down_menu.dart';
 import 'package:flutter_innovainfosys_navid_1/widgets/bottom_navigationbar.dart';
+import '../smartHomePage_utils/smart_mode_container.dart';
 
 class SmartHomePage extends StatefulWidget {
   const SmartHomePage({Key? key}) : super(key: key);
@@ -151,7 +152,7 @@ class _SmartHomePageState extends State<SmartHomePage> {
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(12.0),
                   child: Column(
                     children: [
                       // Smart devices number
@@ -191,293 +192,36 @@ class _SmartHomePageState extends State<SmartHomePage> {
                       ),
 
                       // Smart Lamp Container
-                      Container(
-                        width: double.infinity,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(16),
-                          color: Colors.white,
-                        ),
-
-                        // 1st Column
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(10, 8, 2, 8),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              // 1st Column
-                              Padding(
-                                padding:
-                                    const EdgeInsets.fromLTRB(20, 0, 15, 0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Smart Lamp',
-                                          textAlign: TextAlign.start,
-                                          style: TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w600,
-                                            letterSpacing: 0.07,
-                                            color: Color(0xFF404040),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 2,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Container(
-                                          padding: const EdgeInsets.fromLTRB(
-                                              0, 0, 5, 0),
-                                          child: const Text(
-                                            'Dining Room',
-                                            style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w400,
-                                              letterSpacing: 0.06,
-                                              color: Color(0xFF404040),
-                                            ),
-                                          ),
-                                        ),
-
-                                        //Vertical Line
-                                        Container(
-                                          width: 1,
-                                          height:
-                                              10, // Adjust the height as per your requirement
-                                          color: Colors
-                                              .grey, // Customize the color of the line
-                                        ),
-
-                                        Container(
-                                          padding: const EdgeInsets.fromLTRB(
-                                              5, 0, 0, 0),
-                                          child: const Text(
-                                            'Tue Thu',
-                                            style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w400,
-                                              letterSpacing: 0.06,
-                                              color: Color(0xFF404040),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 3,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Container(
-                                          width: 40,
-                                          height: 40,
-                                          child: const Image(
-                                            fit: BoxFit.cover,
-                                            image: AssetImage('icons/idea.png'),
-                                          ),
-                                        ),
-                                        const SizedBox(
-                                          width: 8,
-                                        ),
-                                        const Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              'from',
-                                              style: TextStyle(
-                                                fontSize: 12,
-                                                fontWeight: FontWeight.w400,
-                                                letterSpacing: 0.06,
-                                                color: Color(0xFF404040),
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 2,
-                                            ),
-                                            Text(
-                                              '8 pm',
-                                              style: TextStyle(
-                                                fontSize: 14,
-                                                fontWeight: FontWeight.w600,
-                                                letterSpacing: 0.07,
-                                                color: Color(0xFF404040),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-
-                              //Vertical Line
-                              Container(
-                                width: 1,
-                                height:
-                                    50, // Adjust the height as per your requirement
-                                color: Colors.grey[
-                                    600], // Customize the color of the line
-                              ),
-
-                              // 2nd Column
-                              Padding(
-                                padding:
-                                    const EdgeInsets.fromLTRB(15, 0, 20, 0),
-                                child: Column(
-                                  children: [
-                                    //ON Button Container
-                                    Row(
-                                      children: [
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 10, 0, 0),
-                                          decoration: BoxDecoration(
-                                            border: Border.all(
-                                              color: const Color(0xFF9A7265),
-                                            ),
-                                            color: const Color(0xFFE7DDDA),
-                                            borderRadius:
-                                                BorderRadius.circular(25),
-                                          ),
-                                          child: const Row(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              Opacity(
-                                                opacity: 0.9,
-                                                child: SizedBox(
-                                                  width: 15,
-                                                  height: 15,
-                                                  child: Image(
-                                                    image: AssetImage(
-                                                        'icons/power-switch.png'),
-                                                    color: Color(0xFF9A7265),
-                                                  ),
-                                                ),
-                                              ),
-                                              Center(
-                                                child: Text(
-                                                  'ON',
-                                                  textAlign: TextAlign.center,
-                                                  style: TextStyle(
-                                                    fontSize: 16,
-                                                    fontWeight: FontWeight.w600,
-                                                    letterSpacing: 0.08,
-                                                    color: Color(0xFF9A7265),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-
-                                    // TO - time Column
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.end,
-                                      children: [
-                                        const Padding(
-                                          padding:
-                                              EdgeInsets.fromLTRB(0, 0, 6, 0),
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.end,
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Text(
-                                                    'to',
-                                                    textAlign: TextAlign.center,
-                                                    style: TextStyle(
-                                                      fontSize: 12,
-                                                      fontWeight:
-                                                          FontWeight.w400,
-                                                      letterSpacing: 0.06,
-                                                      color: Color(0xFF404040),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                              Row(
-                                                children: [
-                                                  Text(
-                                                    '8 am',
-                                                    textAlign: TextAlign.center,
-                                                    style: TextStyle(
-                                                      fontSize: 16,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                      letterSpacing: 0.08,
-                                                      color: Color(0xFF404040),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-
-                                        // Vertical Line
-                                        Column(
-                                          children: [
-                                            Container(
-                                              width: 1,
-                                              height:
-                                                  20, // Adjust the height as per your requirement
-                                              color: Colors
-                                                  .grey, // Customize the color of the line
-                                            ),
-                                          ],
-                                        ),
-
-                                        // Delete button Column
-                                        const Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.end,
-                                          children: [
-                                            Row(
-                                              children: [
-                                                Image(
-                                                  width: 24,
-                                                  height: 24,
-                                                  image: AssetImage(
-                                                    'icons/delete.png',
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                            Row(
-                                              children: [
-                                                Image(
-                                                  width: 20,
-                                                  height: 20,
-                                                  image: AssetImage(
-                                                      'icons/edit.png'),
-                                                ),
-                                              ],
-                                            )
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                      const Column(
+                        children: [
+                          SmartDeviceContainer(
+                            deviceName: 'Smart Lamp',
+                            location: 'Dining Room',
+                            schedule: 'Tue Thu',
+                            deviceIcon: 'icons/idea.png',
+                            fromTime: '8 pm',
+                            toTime: '8 am',
+                            isButtonOn: true,
                           ),
-                        ),
+                          SmartDeviceContainer(
+                            deviceName: 'Air Conditioner',
+                            location: 'Bedroom',
+                            schedule: 'Sun',
+                            deviceIcon: 'icons/ac.png',
+                            fromTime: '10 pm',
+                            toTime: '11 am',
+                            isButtonOn: false,
+                          ),
+                          SmartDeviceContainer(
+                            deviceName: 'Television',
+                            location: 'Living Room',
+                            schedule: 'Tue Thu',
+                            deviceIcon: 'icons/smart-tv.png',
+                            fromTime: '8 pm',
+                            toTime: '8 am',
+                            isButtonOn: true,
+                          ),
+                        ],
                       ),
                     ],
                   ),

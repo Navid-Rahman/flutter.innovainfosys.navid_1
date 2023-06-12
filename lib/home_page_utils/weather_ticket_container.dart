@@ -4,14 +4,14 @@ import 'package:flutter_innovainfosys_navid_1/constants/colors.dart';
 Widget buildWeatherTicketContainer(BuildContext context) {
   return Container(
     padding: const EdgeInsets.only(top: 76),
-    decoration: BoxDecoration(
+    decoration: const BoxDecoration(
       borderRadius: BorderRadius.only(
         bottomLeft: Radius.circular(40),
       ),
       color: AppColors.primaryColor,
     ),
     child: Container(
-      margin: const EdgeInsets.all(24),
+      margin: const EdgeInsets.fromLTRB(24, 16, 24, 16),
       padding: const EdgeInsets.all(16),
       width: double.infinity,
       decoration: BoxDecoration(
