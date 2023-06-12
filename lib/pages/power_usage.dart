@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_innovainfosys_navid_1/bottom_navigation_bar.dart';
+import 'package:flutter_innovainfosys_navid_1/widgets/bottom_navigation_bar.dart';
 
 class PowerUsagePage extends StatefulWidget {
   const PowerUsagePage({super.key});

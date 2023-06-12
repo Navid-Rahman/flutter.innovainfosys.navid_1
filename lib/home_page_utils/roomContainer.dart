@@ -7,7 +7,7 @@ Widget buildRoomContainer(
   String deviceCount,
 ) {
   return Container(
-    height: 165,
+    height: 180,
     width: 150,
     decoration: BoxDecoration(
       color: const Color(0xffd8e4e8),

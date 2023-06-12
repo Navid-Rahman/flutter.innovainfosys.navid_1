@@ -1,128 +1,139 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_innovainfosys_navid_1/constants/colors.dart';
 
 Widget buildWeatherTicketContainer(BuildContext context) {
   return Container(
-    padding: const EdgeInsets.all(15),
-    width: double.infinity,
+    padding: const EdgeInsets.only(top: 76),
     decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(25),
-      color: const Color(0xffd8e4e8),
+      borderRadius: BorderRadius.only(
+        bottomLeft: Radius.circular(40),
+      ),
+      color: AppColors.primaryColor,
     ),
-    child: Column(
-      children: [
-        Row(
-          children: [
-            // Cloud Icon
-            const Padding(
-              padding: EdgeInsets.all(5.0),
-              child: Column(
-                children: [
-                  Image(
-                    image: AssetImage('icons/cloudy.png'),
-                    width: 55,
-                    height: 55,
-                  ),
-                ],
+    child: Container(
+      margin: const EdgeInsets.all(24),
+      padding: const EdgeInsets.all(16),
+      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(24),
+        color: const Color(0xffd8e4e8),
+      ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              // Cloud Icon
+              const Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Column(
+                  children: [
+                    Image(
+                      image: AssetImage('icons/cloudy.png'),
+                      width: 55,
+                      height: 55,
+                    ),
+                  ],
+                ),
               ),
-            ),
-            // Date and place info
-            const Padding(
-              padding: EdgeInsets.all(5.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'May 16, 2023 10:05 am',
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                      letterSpacing: 0.06,
-                      color: Color(0xFF404040),
+              // Date and place info
+              const Padding(
+                padding: EdgeInsets.all(5.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'May 16, 2023 10:05 am',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                        letterSpacing: 0.06,
+                        color: Color(0xFF404040),
+                      ),
                     ),
-                  ),
-                  Text(
-                    'Cloudy',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                      letterSpacing: 0.09,
-                      color: Color(0xFF404040),
+                    Text(
+                      'Cloudy',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: 0.09,
+                        color: Color(0xFF404040),
+                      ),
                     ),
-                  ),
-                  Text(
-                    'Jakarta, Indonesia',
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                      letterSpacing: 0.06,
-                      color: Color(0xFF404040),
+                    Text(
+                      'Jakarta, Indonesia',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                        letterSpacing: 0.06,
+                        color: Color(0xFF404040),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            // Temperature info
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    '19${String.fromCharCode(0x00B0)}C',
-                    style: const TextStyle(
-                      fontSize: 40,
-                      fontWeight: FontWeight.w600,
-                      letterSpacing: 0.2,
-                      color: Color(0xFF404040),
+              // Temperature info
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      '19${String.fromCharCode(0x00B0)}C',
+                      style: const TextStyle(
+                        fontSize: 40,
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: 0.2,
+                        color: Color(0xFF404040),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          ],
-        ),
-        // Horizontal line
-        const SizedBox(
-          width: 300,
-          child: Divider(
-            color: Colors.black,
-            thickness: 1,
-            height: 20,
+            ],
           ),
-        ),
-        // Humidity, Visibility, NE Wind tab section
-        Row(
-          children: [
-            buildWeatherTab(
-              context: context,
-              iconPath: 'icons/drop.png',
-              value: '97',
-              unit: '%',
-              label: 'Humidity',
+          // Horizontal line
+          const SizedBox(
+            width: 300,
+            child: Divider(
+              color: Colors.black,
+              thickness: 1,
+              height: 20,
             ),
-            const SizedBox(
-              width: 5,
-            ),
-            buildWeatherTab(
-              context: context,
-              iconPath: 'icons/view.png',
-              value: '7',
-              unit: 'Km',
-              label: 'Visibility',
-            ),
-            const SizedBox(
-              width: 5,
-            ),
-            buildWeatherTab(
-              context: context,
-              iconPath: 'icons/wind.png',
-              value: '3',
-              unit: 'Km/h',
-              label: 'NE Wind',
-            ),
-          ],
-        ),
-      ],
+          ),
+          // Humidity, Visibility, NE Wind tab section
+          Row(
+            children: [
+              buildWeatherTab(
+                context: context,
+                iconPath: 'icons/drop.png',
+                value: '97',
+                unit: '%',
+                label: 'Humidity',
+              ),
+              const SizedBox(
+                width: 5,
+              ),
+              buildWeatherTab(
+                context: context,
+                iconPath: 'icons/view.png',
+                value: '7',
+                unit: 'Km',
+                label: 'Visibility',
+              ),
+              const SizedBox(
+                width: 5,
+              ),
+              buildWeatherTab(
+                context: context,
+                iconPath: 'icons/wind.png',
+                value: '3',
+                unit: 'Km/h',
+                label: 'NE Wind',
+              ),
+            ],
+          ),
+        ],
+      ),
     ),
   );
 }
@@ -163,7 +174,7 @@ Widget buildWeatherTab({
               Text(
                 value,
                 style: const TextStyle(
-                  fontSize: 18,
+                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                   letterSpacing: 0.09,
                   color: Color(0xFF404040),

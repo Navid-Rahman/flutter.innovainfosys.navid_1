@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_innovainfosys_navid_1/pages/home_page.dart';
+import 'package:flutter_innovainfosys_navid_1/utils/theme.dart';
 
 void main() {
   runApp(const SmartHomeApp());
@@ -10,9 +11,10 @@ class SmartHomeApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      theme: myTheme(),
+      home: const HomePage(),
     );
   }
 }

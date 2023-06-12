@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_innovainfosys_navid_1/bottom_navigation_bar.dart';
 import 'package:flutter_innovainfosys_navid_1/smartHomePage_utils/drop_down_menu.dart';
+import 'package:flutter_innovainfosys_navid_1/widgets/bottom_navigation_bar.dart';
 
 class SmartHomePage extends StatefulWidget {
   const SmartHomePage({Key? key}) : super(key: key);
@@ -461,10 +461,11 @@ class _SmartHomePageState extends State<SmartHomePage> {
                                             Row(
                                               children: [
                                                 Image(
-                                                    width: 20,
-                                                    height: 20,
-                                                    image: AssetImage(
-                                                        'icons/edit.png')),
+                                                  width: 20,
+                                                  height: 20,
+                                                  image: AssetImage(
+                                                      'icons/edit.png'),
+                                                ),
                                               ],
                                             )
                                           ],
