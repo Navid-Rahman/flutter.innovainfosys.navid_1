@@ -190,7 +190,7 @@ class _SmartHomePageState extends State<SmartHomePage> {
                         ),
                       ),
 
-                      // Smart Mode Container
+                      // Smart Lamp Container
                       Container(
                         width: double.infinity,
                         height: 100,
