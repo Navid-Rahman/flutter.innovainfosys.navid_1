@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_innovainfosys_navid_1/constants/assets.dart';
-import 'package:flutter_innovainfosys_navid_1/home_page_utils/greetingsContainer.dart';
-import 'package:flutter_innovainfosys_navid_1/home_page_utils/weatherTicketContainer.dart';
-import 'package:flutter_innovainfosys_navid_1/widgets/bottom_navigation_bar.dart';
-import 'package:flutter_innovainfosys_navid_1/home_page_utils/roomContainer.dart';
+import 'package:flutter_innovainfosys_navid_1/home_page_utils/greetings_container.dart';
+import 'package:flutter_innovainfosys_navid_1/home_page_utils/weather_ticket_container.dart';
+import 'package:flutter_innovainfosys_navid_1/widgets/bottom_navigationbar.dart';
+import 'package:flutter_innovainfosys_navid_1/home_page_utils/room_container.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_innovainfosys_navid_1/home_page_utils/rooms_widget.dart';
 import '../widgets/home_appbar.dart';

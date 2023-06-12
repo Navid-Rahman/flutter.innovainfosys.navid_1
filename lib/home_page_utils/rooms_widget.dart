@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_innovainfosys_navid_1/constants/colors.dart';
-
-import '../home_page_utils/roomContainer.dart';
+import '../home_page_utils/room_container.dart';
 
 class RoomsWidget extends StatelessWidget {
   const RoomsWidget({super.key});
@@ -23,7 +22,7 @@ class RoomsWidget extends StatelessWidget {
             children: [
               Container(
                 padding: const EdgeInsets.fromLTRB(5, 5, 5, 0),
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
