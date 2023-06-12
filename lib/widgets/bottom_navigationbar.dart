@@ -10,6 +10,7 @@ class BottomNavigationBarWidget extends StatefulWidget {
   final ValueChanged<int> onTap;
 
   const BottomNavigationBarWidget({
+    super.key,
     required this.currentIndex,
     required this.onTap,
   });
@@ -61,7 +62,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const PowerUsagePage(),
+                builder: (context) => PowerUsagePage(),
               ),
             );
           } else {
