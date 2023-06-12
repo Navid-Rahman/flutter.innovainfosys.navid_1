@@ -1,0 +1,11 @@
+{
+    "json.schemas": [
+      {
+        "fileMatch": [
+          "*.svg"
+        ],
+        "url": "https://raw.githubusercontent.com/kristerkari/prettier-plugin-svg/main/schema.json"
+      }
+    ]
+  }
+  

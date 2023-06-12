@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_innovainfosys_navid_1/constants/colors.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({super.key});

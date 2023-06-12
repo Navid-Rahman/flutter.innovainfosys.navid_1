@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_innovainfosys_navid_1/constants/assets.dart';
-import 'package:flutter_innovainfosys_navid_1/home_page_utils/greetings_container.dart';
 import 'package:flutter_innovainfosys_navid_1/home_page_utils/weather_ticket_container.dart';
 import 'package:flutter_innovainfosys_navid_1/widgets/bottom_navigationbar.dart';
-import 'package:flutter_innovainfosys_navid_1/home_page_utils/room_container.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_innovainfosys_navid_1/home_page_utils/rooms_widget.dart';
 import '../widgets/home_appbar.dart';
@@ -60,6 +58,15 @@ class _HomePageState extends State<HomePage> {
             right: 0,
             child: SvgPicture.asset(
               Assets.cloud2,
+            ),
+          ),
+          Positioned(
+            top: 250,
+            right: 0,
+            child: SvgPicture.asset(
+              Assets.sun,
+              height: 50,
+              width: 50,
             ),
           ),
         ],

@@ -96,7 +96,7 @@ class SmartDeviceContainer extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Container(
+                      SizedBox(
                         width: 40,
                         height: 40,
                         child: Image(
