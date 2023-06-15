@@ -35,11 +35,13 @@ class SmartDeviceContainer extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            // Device details
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 0, 15, 0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // Device name
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -58,6 +60,7 @@ class SmartDeviceContainer extends StatelessWidget {
                   const SizedBox(
                     height: 2,
                   ),
+                  // Location and schedule
                   Row(
                     children: [
                       Container(
@@ -94,6 +97,7 @@ class SmartDeviceContainer extends StatelessWidget {
                   const SizedBox(
                     height: 3,
                   ),
+                  // Device icon and from time
                   Row(
                     children: [
                       SizedBox(
@@ -138,6 +142,7 @@ class SmartDeviceContainer extends StatelessWidget {
                 ],
               ),
             ),
+            // Button and to time
             Container(
               width: 1,
               height: 50,
@@ -147,6 +152,7 @@ class SmartDeviceContainer extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(15, 0, 20, 0),
               child: Column(
                 children: [
+                  // Button state
                   Row(
                     children: [
                       Image(
@@ -160,6 +166,7 @@ class SmartDeviceContainer extends StatelessWidget {
                       ),
                     ],
                   ),
+                  // To time and action icons
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
@@ -211,6 +218,7 @@ class SmartDeviceContainer extends StatelessWidget {
                       const Column(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
+                          // Delete icon
                           Row(
                             children: [
                               Image(
@@ -222,6 +230,7 @@ class SmartDeviceContainer extends StatelessWidget {
                               ),
                             ],
                           ),
+                          // Edit icon
                           Row(
                             children: [
                               Image(

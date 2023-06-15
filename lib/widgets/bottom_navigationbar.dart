@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_innovainfosys_navid_1/pages/home_page.dart';
 import 'package:flutter_innovainfosys_navid_1/pages/power_usage.dart';
 import 'package:flutter_innovainfosys_navid_1/pages/smart_home_page.dart';
-
 import '../constants/colors.dart';
 
 class BottomNavigationBarWidget extends StatefulWidget {

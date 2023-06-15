@@ -4,7 +4,7 @@ import '../widgets/power_usage_appbar.dart';
 import '../power_usage_utils/line_chart.dart';
 
 class PowerUsagePage extends StatefulWidget {
-  PowerUsagePage({super.key});
+  const PowerUsagePage({super.key});
 
   @override
   State<PowerUsagePage> createState() => _PowerUsagePageState();
@@ -45,6 +45,7 @@ class _PowerUsagePageState extends State<PowerUsagePage> {
           padding: const EdgeInsets.all(24.0),
           child: Column(
             children: [
+              // Usage information
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -71,6 +72,7 @@ class _PowerUsagePageState extends State<PowerUsagePage> {
               const SizedBox(
                 height: 16,
               ),
+              // Power usage line chart
               PowerUsageLineChart(data: chartData),
             ],
           ),

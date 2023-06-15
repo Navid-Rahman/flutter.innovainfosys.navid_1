@@ -3,7 +3,7 @@ import 'package:flutter_innovainfosys_navid_1/constants/colors.dart';
 import '../home_page_utils/room_container.dart';
 
 class RoomsWidget extends StatelessWidget {
-  const RoomsWidget({super.key});
+  const RoomsWidget({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class RoomsWidget extends StatelessWidget {
                 ],
               ),
 
-              //Rooms detailed feature container
+              // Rooms detailed feature container
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -66,7 +66,7 @@ class RoomsWidget extends StatelessWidget {
                 ],
               ),
 
-              // Active Componants lists
+              // Active Components lists
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -111,11 +111,11 @@ class RoomsWidget extends StatelessWidget {
                 ],
               ),
 
-              //AC container section
+              // AC and Lamp container section
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  //AC Section
+                  // AC Section
                   Container(
                     width: 165,
                     height: 130,
@@ -137,7 +137,7 @@ class RoomsWidget extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 const Text(
-                                  'Temparature',
+                                  'Temperature',
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w400,
@@ -190,12 +190,12 @@ class RoomsWidget extends StatelessWidget {
                                 margin: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                                 decoration: BoxDecoration(
                                   border: Border.all(
-                                    color: const Color(0xff659a6d),
+                                    color: const Color(0xFF659A6D),
                                   ),
-                                  color: const Color(0xffe0ebe2),
+                                  color: const Color(0xFFE0EBE2),
                                   borderRadius: BorderRadius.circular(25),
                                 ),
-                                child: const Row(
+                                child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Center(
@@ -217,7 +217,8 @@ class RoomsWidget extends StatelessWidget {
                                         height: 15,
                                         child: Image(
                                           image: AssetImage(
-                                              'icons/power-switch.png'),
+                                            'icons/power-switch.png',
+                                          ),
                                           color: Color(0xFF659A6D),
                                         ),
                                       ),
@@ -232,7 +233,7 @@ class RoomsWidget extends StatelessWidget {
                     ),
                   ),
 
-                  //Lamp Section
+                  // Lamp Section
                   Container(
                     width: 165,
                     height: 130,
@@ -254,7 +255,7 @@ class RoomsWidget extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 Text(
-                                  'Colour',
+                                  'Color',
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w400,
@@ -307,12 +308,12 @@ class RoomsWidget extends StatelessWidget {
                                 margin: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                                 decoration: BoxDecoration(
                                   border: Border.all(
-                                    color: const Color(0xff659a6d),
+                                    color: const Color(0xFF659A6D),
                                   ),
-                                  color: const Color(0xffe0ebe2),
+                                  color: const Color(0xFFE0EBE2),
                                   borderRadius: BorderRadius.circular(25),
                                 ),
-                                child: const Row(
+                                child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Center(
@@ -334,7 +335,8 @@ class RoomsWidget extends StatelessWidget {
                                         height: 15,
                                         child: Image(
                                           image: AssetImage(
-                                              'icons/power-switch.png'),
+                                            'icons/power-switch.png',
+                                          ),
                                           color: Color(0xFF659A6D),
                                         ),
                                       ),

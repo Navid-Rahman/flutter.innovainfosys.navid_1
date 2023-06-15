@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
+// Class for creating a dropdown menu item
 class DropDownMenu {
+  // Method to build a popup menu item
   static PopupMenuItem<String> buildMenuItem(String value, String label) {
     return PopupMenuItem<String>(
+      // Assigning the value of the menu item
       value: value,
       child: Container(
         padding: const EdgeInsets.fromLTRB(16, 20, 19, 20),
@@ -15,6 +18,7 @@ class DropDownMenu {
           ),
         ),
         child: Text(
+          // Label text of the menu item
           label,
           style: const TextStyle(
             fontSize: 16,
